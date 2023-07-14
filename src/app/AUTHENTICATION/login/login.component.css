@@ -1,0 +1,14 @@
+.login-page{
+    height:20rem;
+}
+h5 a{
+    text-decoration: none;
+    color: #29B547;
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+small {
+    color: red;
+}

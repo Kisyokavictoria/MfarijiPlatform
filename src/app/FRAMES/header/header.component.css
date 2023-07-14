@@ -1,0 +1,26 @@
+.background {
+    background: #D9D9D9;
+}
+
+.navlinks a {
+   margin: 0rem 3rem;
+    color: #000;
+    font-family: inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+}
+.navlinks a:hover{
+    color: #CA7F0D;
+   
+}
+.navlinks a:active{
+    text-decoration: underline;
+
+}
+.align-left{
+    margin-right:15rem;
+}
+#login{
+    color: #CA7F0D;
+}

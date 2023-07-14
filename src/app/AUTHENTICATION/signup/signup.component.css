@@ -1,0 +1,38 @@
+section {
+    font-family: inter;
+    color: #000;
+    /* font-size: 1.3rem; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.signup {
+    font-family: inter;
+    font-size: 1.3rem;
+}
+
+.login-text {
+    color: #000;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.login-text a {
+    color: #29B547;
+    text-decoration: none;
+
+}
+#image-upload{
+    height: fit-content;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+small {
+    color: red;
+}

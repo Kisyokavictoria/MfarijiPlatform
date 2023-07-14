@@ -1,0 +1,174 @@
+/* ng-container false style */
+.cart {
+    background: #D9D9D9;
+    font-family: inter;
+    padding-bottom: 3rem;
+
+}
+
+.header-text {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.header-text h1 {
+
+    color: #000;
+    font-family: Inter;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 2rem;
+
+}
+
+.header-text p {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.raised-text {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.bar {
+    background: #D9D9D9;
+
+}
+
+.donation {
+    background: #D9D9D9;
+    overflow-x: hidden;
+    margin: 0rem;
+
+}
+
+.donate-button {
+    margin-left: 2rem;
+    position: relative;
+    bottom: 1rem;
+    border-radius: 0.625rem;
+    background: #3487D3;
+    padding: 0.6875rem 1rem;
+    border: none;
+    color: #000;
+    font-size: 0.875rem;
+
+}
+
+.progress-bar {
+    background-color: #29B547;
+}
+
+.seemore {
+    text-align: center;
+}
+
+.seemore button {
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 0.625rem;
+    background: #3487D3;
+    padding: 0.6875rem 1rem;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+
+
+/* ng-container true style */
+
+.notempty {
+    background: #D9D9D9;
+    font-family: inter;
+    overflow-x: hidden;
+
+}
+
+.notemptycart {
+    background: white;
+
+
+}
+
+.cards {
+    border: 1px solid black;
+}
+
+.ksh {
+    color: #000;
+    font-size: 0.7rem;
+}
+
+.btn-close {
+    margin-left: 2.1rem;
+}
+
+.head-text {
+    text-align: center;
+
+}
+
+.head-text h1 {
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 550;
+
+}
+
+.head-text p {
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.payment-form {
+    margin-top: 2.5rem;
+}
+
+.payment-fields {
+    padding: 0.5rem 0rem;
+}
+
+.payment-fields input {
+
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.3rem;
+}
+
+.validations {
+    width: 70%;
+    margin: 4.5rem auto;
+    height: 3.5rem;
+    background: #CA7F0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.centered-text {
+    text-align: center;
+    margin: auto;
+}
+
+.payment-button {
+    background: #3487D3;
+    border: none;
+    color: black;
+    width: 8.5rem;
+    height: 3rem;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+}

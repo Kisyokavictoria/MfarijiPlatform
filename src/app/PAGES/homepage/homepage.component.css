@@ -1,0 +1,184 @@
+.homepage {
+    font-family: inter;
+    font-style: normal;
+    overflow-x: hidden;
+
+}
+
+.heading {
+    color: #E01515;
+    font-size: 1.5rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 2.5rem;
+    margin-top: 5rem;
+}
+
+.heading-text {
+    color: #000;
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
+
+
+}
+
+.button {
+    /* margin-left: 10rem; */
+    margin-top: 2.12rem;
+    padding: 0.875rem 1.375rem;
+    width: 11.685rem;
+    position: relative;
+    border-radius: 1.25rem;
+    background: #3487D3;
+    border: none;
+    color: black;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: normal;
+
+
+}
+
+.box {
+    margin: 0rem auto;
+    align-items: center;
+    border: 0.12rem solid black;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+}
+
+.box img {
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.box span {
+    color: #000;
+    font-size: 3.125rem;
+    position: relative;
+    font-weight: 340;
+    top: 0.5rem;
+    margin-left: 1.2rem;
+}
+
+.icon-texts {
+    text-align: center;
+}
+
+.icon-texts p {
+    color: #000;
+    font-size: 2.25rem;
+    line-height: normal;
+
+}
+
+.icon-texts img {
+    position: relative;
+    bottom: 2.19rem;
+
+}
+
+.icon-texts h5 {
+    /* position: relative; */
+    bottom: 4rem;
+    color: #E01515;
+    font-size: 1.7rem;
+    line-height: normal;
+}
+
+.boxes {
+    background: #D9D9D9;
+    width: fit-content;
+    height: 12.5rem;
+    margin: 1rem auto;
+    padding: 0rem 1rem;
+}
+
+.fundraisers {
+    text-align: center;
+
+}
+
+.raised-text {
+    color: #000;
+    font-size: 1rem;
+}
+
+
+.donation {
+
+    overflow-x: hidden;
+    margin: 0rem;
+
+}
+
+.donate-button {
+    margin-left: 2rem;
+    position: relative;
+    bottom: 1rem;
+    border-radius: 0.625rem;
+    background: #3487D3;
+    padding: 0.6875rem 1rem;
+    border: none;
+    color: #000;
+    font-size: 0.875rem;
+
+}
+
+.progress-bar {
+    background-color: #29B547;
+}
+
+.viewmore a {
+    color: #29B547;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+.Ftext {
+    text-align: center;
+}
+
+.Ftext h1 {
+    font-family: Inter;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.Ftext p {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* .card {
+    border-radius: 1.25rem 1.25rem 0 0;
+    border: none;
+    border: 1px solid black;
+}
+.card-text {
+    color: #000;
+    font-size: normal;
+    font-family: inter;
+    overflow: auto;
+    
+}
+.content-height{
+    max-height: 20rem;
+} */
+/* .align-height {
+    height:;
+  } */
