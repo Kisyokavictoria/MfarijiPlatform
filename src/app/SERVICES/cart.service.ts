@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class CartService {
   fundraisers: Cartinterface[] = []
+  
   // isCartCleared = false;
 
   constructor() {
@@ -68,10 +69,14 @@ export class CartService {
     //   localStorage.removeItem('fundraisers');
     // } else {
       localStorage.setItem('fundraisers', JSON.stringify(this.fundraisers));
-    
+  
   }
-  // localStorage.setItem('fundraisers', JSON.stringify(this.fundraisers));
+ 
 
+  //getting the total items in the cart and displaying them on the cart icon
+  getTotalItems(): number {
+    return this.fundraisers.length;
+  }
 
 
 

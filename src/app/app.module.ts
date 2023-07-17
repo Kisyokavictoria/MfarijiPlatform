@@ -14,6 +14,10 @@ import { AboutusComponent } from './PAGES/aboutus/aboutus.component';
 import { CartComponent } from './PAGES/cart/cart.component';
 import{HttpClientModule} from '@angular/common/http';
 import{ReactiveFormsModule} from '@angular/forms';
+import { DashboardComponent } from './PAGES/dashboard/dashboard.component';
+import { StartfundraiserComponent } from './AUTHENTICATION/startfundraiser/startfundraiser.component';
+import { UploadimageComponent } from './AUTHENTICATION/uploadimage/uploadimage.component';
+import { ContactdetailsComponent } from './AUTHENTICATION/contactdetails/contactdetails.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import{ReactiveFormsModule} from '@angular/forms';
     HomepageComponent,
     DonationsComponent,
     AboutusComponent,
-    CartComponent
+    CartComponent,
+    DashboardComponent,
+    StartfundraiserComponent,
+    UploadimageComponent,
+    ContactdetailsComponent
   ],
   imports: [
     BrowserModule,
