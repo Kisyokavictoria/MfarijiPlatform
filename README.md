@@ -20,7 +20,13 @@ Instalation packages:
                   - To run the project on your browser once cloned open your git bash terminal on visual studio and type in
                    ng serve --o.
                   - To create a new component on the project run 
-                   ng genarate component component-name. or simply ng g c component-name
+                   (ng genarate component component-name. or simply ng g c component-name)
                    -To create a new service on the project run 
-                   ng generate service service-name   or simpley ng g s service-name.
+                   (ng generate service service-name   or simpley ng g s service-name.)
+                   - To create an interface run
+                   (ng g i interface-name)
+                   - To install angular material run
+                   (npm install @angular/material.)
+                   
+                   
 
