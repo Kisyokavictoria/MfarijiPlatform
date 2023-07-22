@@ -1,5 +1,6 @@
 
-<ng-container *ngIf="fundraisers.length > 0; else emptyCart">
+<ng-container >
+    <!-- *ngIf="fundraisers.length > 0; else emptyCart" -->
     
     <div class="container-fluid notempty">
         <!-- start of the grid partitioning -->
@@ -7,7 +8,7 @@
             <!--    First partition -->
             <div class="col-md-4 cart-cards ">
                 <div class="row row-cols-1 row-cols-md-1 g-5 donation mt-3 notemptycart">
-                    <div class="col" *ngFor="let cards of fundraisers">
+                    <div class="col" *ngFor="let cards of cart">
                         <div class="card m-4 " style=" border-radius: 1.25rem 1.25rem 0 0;
                         border: none; max-width: 20rem; box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);">
                             <img [src]="cards.Image" class="card-img-top" alt="Skyscrapers" />
@@ -22,7 +23,8 @@
                                     <input type="number" class="form-control form-control-sm" id="numberExample"
                                         style="width:70%;" placeholder="100" />
 
-                                    <button type="button" class="btn-close" aria-label="Close" (click)="removeItem(cards.id)"></button>
+                                    <button type="button" class="btn-close" aria-label="Close" ></button>
+                                    <!-- (click)="removeItem(cards.id)" -->
                                 </div>
 
 
@@ -30,7 +32,8 @@
 
                         </div>
                     </div>
-                    <button class="btn btn-primary" style="background: red; border: none;" (click)="clearCart()">Empty cart</button>
+                    <button class="btn btn-primary" style="background: red; border: none;">Empty cart</button>
+                    <!-- (click)="clearCart()" -->
                 </div>
             </div>
             <!-- second partitioning -->
@@ -88,7 +91,7 @@
             <p>Give to one of the earth changing projects below or browse to get a new favorite</p>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-5 donation mt-3">
-            <div class="col" *ngFor="let cards of fundraisers">
+            <div class="col" *ngFor="let cards of cart">
                 <div class="card h-100" style=" border-radius: 1.25rem 1.25rem 0 0;
                     border: none;">
                     <img [src]="cards.Image" class="card-img-top" alt="Skyscrapers" />

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cartinterface } from 'src/app/INTERFACES/cartinterface';
-import { CartService } from 'src/app/SERVICES/cart.service';
+import { CartService } from 'src/app/SERVICES/cart/cart.service';
 
 @Component({
   selector: 'app-donations',
@@ -28,16 +28,16 @@ export class DonationsComponent implements OnInit {
 
   ]
 
-  addToCart(fundraisers: Cartinterface) {
-    const isDuplicate = this.cartService.checkIfItemExists(fundraisers.id);
-    if (isDuplicate) {
-      window.alert('Item already exists in the cart');
-      return;
-    }
+  // addToCart(fundraisers: Cartinterface) {
+  //   const isDuplicate = this.cartService.checkIfItemExists(fundraisers.id);
+  //   if (isDuplicate) {
+  //     window.alert('Item already exists in the cart');
+  //     return;
+  //   }
   
-    this.cartService.addToCart(fundraisers);
-    // window.alert("The donation has been added to the cart!");
-  }
+  //   this.cartService.addToCart(fundraisers);
+  //   // window.alert("The donation has been added to the cart!");
+  // }
 
 
 

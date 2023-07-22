@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { subscribeOn } from 'rxjs';
-import { CartService } from 'src/app/SERVICES/cart.service';
+import { CartService } from 'src/app/SERVICES/cart/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,33 +9,33 @@ import { CartService } from 'src/app/SERVICES/cart.service';
 })
 export class CartComponent implements OnInit {
   ngOnInit(): void {
-    this.fundraisers = this.cartService.getItems();
+    // this.fundraisers = this.cartService.getItems();
   
   }
 
-  fundraisers = this.cartService.getItems();
+  // fundraisers = this.cartService.getItems();
 
-  clearCart(): void {
-    this.cartService.clearCart();
-    this.fundraisers = []
-    console.log('Cart cleared');
-  }
-
-
-    removeItem(itemId ?: number): void {
-      if(itemId) {
-        this.cartService.removeItem(itemId);
-      }
-
-    }
-    constructor(private cartService: CartService){ }
+  // clearCart(): void {
+  //   this.cartService.clearCart();
+  //   this.fundraisers = []
+  //   console.log('Cart cleared');
+  // }
 
 
-    // cart = [
-    //   {Image: '/assets/images/w1.png',heading: 'Help rebuild myself' },
-    //   {Image: '/assets/images/w2.png',heading: 'Help rebuild myself'},
-    //   {Image: '/assets/images/w3.png',heading: 'Help rebuild myself'}
-    // ]
+  //   removeItem(itemId ?: number): void {
+  //     if(itemId) {
+  //       this.cartService.removeItem(itemId);
+  //     }
+
+  //   }
+  //   constructor(private cartService: CartService){ }
+
+
+    cart = [
+      {Image: '/assets/images/w1.png',content: 'Help rebuild myself' },
+      {Image: '/assets/images/w2.png',heading: 'Help rebuild myself'},
+      {Image: '/assets/images/w3.png',heading: 'Help rebuild myself'}
+    ]
 
 
 

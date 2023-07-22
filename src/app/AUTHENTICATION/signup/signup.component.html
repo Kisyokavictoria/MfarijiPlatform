@@ -7,7 +7,7 @@
 
                         <h3 class="mb-5 signup">Sign Up </h3>
 
-                        <form action="" autocomplete="on" [formGroup]="signupForm" (ngSubmit)="formSubmit()">
+                        <form [formGroup]="signupForm" (ngSubmit)="formSubmit()">
 
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="Fname">First name</label>
@@ -87,8 +87,9 @@
                             </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="image-upload">BIRTH/DEATH CERTIFICATE</label>
-                                <input type="file" id="image-upload" class="form-control form-control-sm "
-                                    formControlName="image">
+                                <input type="file" (change)="onImageChange($event)" id="image-upload" class="form-control form-control-sm "
+                                    formControlName="image"
+                                    >
                                     <div>
                                         <small
                                             *ngIf="signupForm.get('image')?.invalid && signupForm.get('image')?.touched ">Image required</small>

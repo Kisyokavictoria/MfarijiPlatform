@@ -13,11 +13,16 @@ import { DonationsComponent } from './PAGES/donations/donations.component';
 import { AboutusComponent } from './PAGES/aboutus/aboutus.component';
 import { CartComponent } from './PAGES/cart/cart.component';
 import{HttpClientModule} from '@angular/common/http';
-import{ReactiveFormsModule} from '@angular/forms';
+import{FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './PAGES/dashboard/dashboard.component';
 import { StartfundraiserComponent } from './AUTHENTICATION/startfundraiser/startfundraiser.component';
-import { UploadimageComponent } from './AUTHENTICATION/uploadimage/uploadimage.component';
-import { ContactdetailsComponent } from './AUTHENTICATION/contactdetails/contactdetails.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { Header1Component } from './FRAMES/header1/header1.component';
+import { Header2Component } from './FRAMES/header2/header2.component';
+
 
 @NgModule({
   declarations: [
@@ -32,8 +37,8 @@ import { ContactdetailsComponent } from './AUTHENTICATION/contactdetails/contact
     CartComponent,
     DashboardComponent,
     StartfundraiserComponent,
-    UploadimageComponent,
-    ContactdetailsComponent
+    Header1Component,
+    Header2Component,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +46,11 @@ import { ContactdetailsComponent } from './AUTHENTICATION/contactdetails/contact
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatStepperModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

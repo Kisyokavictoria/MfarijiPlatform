@@ -1,0 +1,90 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "signup": [
+    {
+      "id": 1
+    },
+    {
+      "firstName": "victoria",
+      "lastName": "Bahati",
+      "email": "kisyokav@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "image": "C:\\fakepath\\donate1.png",
+      "id": 2
+    },
+    {
+      "firstName": "jane",
+      "lastName": "juma",
+      "email": "freg@hiuhkl",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "image": "C:\\fakepath\\MOBILE MONEY 1 (1).png",
+      "id": 3
+    },
+    {
+      "firstName": "jkkjbj",
+      "lastName": "ihinjn",
+      "email": "op@op",
+      "password": "32`3123231",
+      "confirmPassword": "1223324131",
+      "image": "C:\\fakepath\\MOBILE MONEY 1.png",
+      "id": 4
+    },
+    {
+      "firstName": "reee",
+      "lastName": "free",
+      "email": "freg@hiuhkl",
+      "password": "1234567890",
+      "confirmPassword": "123456789",
+      "image": "C:\\fakepath\\donate1.png",
+      "id": 5
+    },
+    {
+      "firstName": "jkkjbj",
+      "lastName": "Bahati",
+      "email": "tt@admin",
+      "password": "1234567890",
+      "confirmPassword": "1234567890",
+      "image": "C:\\fakepath\\MOBILE MONEY 1 (1).png",
+      "id": 6
+    },
+    {
+      "firstName": "fefd",
+      "lastName": "hh",
+      "email": "op@op",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "image": "C:\\fakepath\\donate1.png",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    }
+  ]
+}

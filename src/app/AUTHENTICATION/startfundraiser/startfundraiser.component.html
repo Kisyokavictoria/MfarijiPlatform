@@ -1,1 +1,240 @@
-<p>startfundraiser works!</p>
+<mat-stepper labelPosition="bottom" #stepper class="container steps">
+    <!-- step1 -->
+    <mat-step [stepControl]="firstFormGroup" class="steppers">
+        <!-- step1 form -->
+        <form [formGroup]="firstFormGroup" >
+            <!-- stepper1 -->
+            <ng-template matStepLabel >setting</ng-template>
+            <section>
+                <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div>
+                                <div class="card-body p-5">
+            
+                                    <form action="" autocomplete="on">
+            
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="title">TITLE</label>
+                                            <input type="text" id="title" class="form-control form-control-sm">
+            
+            
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="brief">BRIEF</label>
+                                            <!-- <input type="text" id="brief" class="form-control form-control-sm"> -->
+                                            <textarea id="message" name="message" rows="7" cols="50"class="form-control form-control-sm" style="border: 1px solid #000;"></textarea>
+                                        </div>
+            
+            
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="idno">ID NUMBER</label>
+                                            <input type="number" id="idno" class="form-control form-control-sm">
+                                        </div>
+            
+            
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="county">COUNTY</label>
+                                            <input type="text" id="county" class="form-control form-control-sm">
+            
+                                        </div>
+            
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="subcounty">SUB COUNTY</label>
+                                            <input type="text" id="subcounty" class="form-control form-control-sm">
+            
+                                        </div>
+            
+                                        <div class="text-center" style="font-weight: 600;">
+                                            <h2>OPTIONAL SETTINGS</h2>
+                                        </div>
+            
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="amount">ENTER AMOUNT</label>
+                                            <input type="number" id="amount" class="form-control form-control-sm">
+            
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="amount">END DATE </label>
+                                            <input type="date" id="amount" class="form-control form-control-sm">
+            
+                                        </div>
+                            
+            
+            
+                                    </form>
+            
+                                    
+            
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button mat-button matStepperNext  class="btn btn-primary button">Next</button>
+                  </div>
+            </section>
+            
+            
+        </form>
+
+    </mat-step>
+
+
+    <!-- step2 -->
+    <mat-step [stepControl]="secondFormGroup" optional>
+        <form [formGroup]="secondFormGroup">
+            <!-- stepper2 -->
+            <ng-template matStepLabel  >Upload images</ng-template>
+            <section>
+                <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div class="card-body p-5">
+                                <form action="" autocomplete="on">
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="image-upload">BIRTH/DEATH CERTIFICATE</label>
+                                        <input type="file" id="image-upload" class="form-control form-control-sm ">
+                                    </div>
+            
+                                </form>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+        </form>
+
+    </mat-step>
+
+    <!-- step3 -->
+    <mat-step>
+        <!-- stepper3 -->
+        <ng-template matStepLabel >Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-stepper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
+
+
+
+
+
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div>
+                    <div class="card-body p-5">
+
+                        <form action="" autocomplete="on">
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="title">TITLE</label>
+                                <input type="text" id="title" class="form-control form-control-sm">
+
+
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="brief">BRIEF</label>
+                                <!-- <input type="text" id="brief" class="form-control form-control-sm">
+                                <textarea id="message" name="message" rows="7" cols="50"class="form-control form-control-sm" style="border: 1px solid #000;"></textarea>
+                            </div>
+
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="idno">ID NUMBER</label>
+                                <input type="number" id="idno" class="form-control form-control-sm">
+                            </div>
+
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="county">COUNTY</label>
+                                <input type="text" id="county" class="form-control form-control-sm">
+
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="subcounty">SUB COUNTY</label>
+                                <input type="text" id="subcounty" class="form-control form-control-sm">
+
+                            </div>
+
+                            <div class="text-center" style="font-weight: 600;">
+                                <h2>OPTIONAL SETTINGS</h2>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="amount">ENTER AMOUNT</label>
+                                <input type="number" id="amount" class="form-control form-control-sm">
+
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="amount">END DATE </label>
+                                <input type="date" id="amount" class="form-control form-control-sm">
+
+                            </div>
+                            <!-- <button class="btn btn-primary btn-sm  next" type="submit">NEXT</button>
+                            <div class="d-flex justify-content-end mt-5">
+                                <button class="btn btn-primary button" (click)="navigateToPage">NEXT</button>
+                            </div>
+
+
+                        </form>
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
