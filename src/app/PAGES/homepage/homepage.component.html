@@ -1,5 +1,5 @@
 <!-- First division of the honme page containing a text and image displayed in flex -->
-<app-header></app-header>
+<app-header1> </app-header1>
 <div class="container-fluid homepage">
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6">
@@ -14,12 +14,12 @@
                 and brings about positive change. Let compassion be your guiding force, and let your donation be a
                 catalyst for a more compassionate and equitable world. Every act of giving counts, and together,
                 we can create a better tomorrow for all.
-            </p>
-            <button class="btn btn-secondary button">START FUNDRAISING</button>
+            </p> 
+            <button class="btn btn-secondary button" (click)="navigateToLogin()">START FUNDRAISING</button>
 
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 mt-5 d-flex justify-content-center">
-            <img src="/assets/images/homeimg.png" alt="Mfariji" class="img-fluid  ">
+            <img src="/assets/images/homeMoney.png" alt="Mfariji" class="img-fluid  ">
 
         </div>
     </div>

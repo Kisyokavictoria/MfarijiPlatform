@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cartinterface } from '../../INTERFACES/cartinterface';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { NotificationService } from '../notifications/notification.service';
 
@@ -9,20 +9,32 @@ import { NotificationService } from '../notifications/notification.service';
   providedIn: 'root'
 })
 export class CartService {
-  cartItems: Cartinterface[] = [];
-  private cartListSource = new BehaviorSubject<any>([]);
-  public cartList$ = this.cartListSource.asObservable();
+ // cartItems: Cartinterface[] = [];
+  // private cartListSource = new BehaviorSubject<any>([]);
+  // public cartList$ = this.cartListSource.asObservable();
+  private cartItems: any[] = [];
+  private cartItemsSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 
   
   // isCartCleared = false; 
 
   constructor(private notif: NotificationService) {}
-
-  updateCartList(product : any){
-    this.cartItems.push(...product);
-    this.cartListSource.next(this.cartItems);
-    this.notif.showSuccess('item added to cart', 'Added item')
+  // Method to add item to the cart
+  addItemToCart(item: any) {
+    this.cartItems.push(item);
+    this.cartItemsSubject.next(this.cartItems);
   }
+
+  // Method to get the cart items as an Observable
+  getCartItems(): Observable<any[]> {
+    return this.cartItemsSubject.asObservable();
+  }
+
+  // updateCartList(product : any){
+  //   this.cartItems.push(...product);
+  //   this.cartListSource.next(this.cartItems);
+  //   this.notif.showSuccess('item added to cart', 'Added item')
+  // }
   
 
   // addToCart(fundraisers: Cartinterface) {

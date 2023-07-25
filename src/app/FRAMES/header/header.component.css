@@ -1,26 +1,38 @@
 .background {
-    background: #D9D9D9;
+   
+    background: #C8E5C3;
+    margin: 0rem 2rem 2rem 2rem;
 }
 
 .navlinks a {
-   margin: 0rem 3rem;
+    margin: 0rem 8rem;
     color: #000;
     font-family: inter;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 300;
 }
-.navlinks a:hover{
-    color: #2443B2;
-   
-}
-.navlinks a:active{
-    text-decoration: underline;
+
+.navlinks a:hover {
+    color: #3487d3;
 
 }
-.align-left{
-    margin-right:15rem;
+.active-link{
+    color:#3487d3
 }
-#login{
+/* a:active {
+    text-decoration: underline;
+    color: #3487d3;
+
+} */
+
+/* .align-left{
+    margin-right:15rem;
+} */
+#login {
     color: #2443B2;
+}
+
+.nav-item {
+    padding: 0rem 1rem;
 }

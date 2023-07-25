@@ -3,7 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn,
 import { Router } from '@angular/router';
 import { Signupinterface } from 'src/app/INTERFACES/signupinterface';
 import { SignupserviceService } from 'src/app/SERVICES/Auth-service/signupservice.service';
-import { ConfirmPasswordValidator } from './password.validatior';
+import { ConfirmPasswordValidator } from './password.validator';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -112,7 +112,7 @@ export class SignupComponent implements OnInit {
       catchError((error: HttpErrorResponse) => {
         if (error.status === 409) {
           // Handle the conflict error, e.g., show a message to the user
-          console.log('User already exists or conflicting data.');
+          alert('User already exists or conflicting data.');
         } else {
           // Handle other errors if needed
           console.error('Signup error:', error);
@@ -121,7 +121,9 @@ export class SignupComponent implements OnInit {
         return throwError(error);
       })
     ).subscribe(resp => {
-      console.log("signup Successful", resp);
+      alert("signup Successful");
+      this.router.navigate(['login']);
+      
 
 
     },

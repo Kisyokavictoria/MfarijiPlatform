@@ -20,13 +20,12 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { Header1Component } from './FRAMES/header1/header1.component';
-import { Header2Component } from './FRAMES/header2/header2.component';
+import { Header1Component } from './FRAMES/header1/header1.component'
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+        AppComponent,
     FooterComponent,
     HeaderComponent,
     LoginComponent,
@@ -38,7 +37,6 @@ import { Header2Component } from './FRAMES/header2/header2.component';
     DashboardComponent,
     StartfundraiserComponent,
     Header1Component,
-    Header2Component,
   ],
   imports: [
     BrowserModule,

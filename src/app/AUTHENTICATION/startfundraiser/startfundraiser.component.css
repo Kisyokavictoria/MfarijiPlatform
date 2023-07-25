@@ -1,6 +1,5 @@
-section {
+mat-stepper {
     font-family: inter;
-    color: #000;
     /* font-size: 1.3rem; */
     font-style: normal;
     font-weight: 400;
@@ -28,12 +27,29 @@ section {
     width: 7.685rem;
     position: relative;
     border-radius: 1.25rem;
-    background: #3487D3;
     border: none;
-    color: #000;
+   color: white;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: normal;
+    
+
+}
+
+
+.mat-button{
+    color: white;
+}
+.head-text h2{
+    font-weight: 400;
+    font-size: 1.875rem;
+
+    
+}
+.head-text h1{
+    font-size: 1.875rem;
+    font-weight: 700;
+
 
 }
 

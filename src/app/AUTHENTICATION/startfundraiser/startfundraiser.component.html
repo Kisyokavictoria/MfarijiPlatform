@@ -1,3 +1,10 @@
+<app-header></app-header>
+
+<div class="text-center mt-5 head-text" >
+    <h2>start fundraiser</h2>
+    <h1 class="mt-4 mb-5">follow the steps to start a fundraiser</h1>
+
+</div>
 <mat-stepper labelPosition="bottom" #stepper class="container steps">
     <!-- step1 -->
     <mat-step [stepControl]="firstFormGroup" class="steppers">
@@ -17,6 +24,9 @@
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="title">TITLE</label>
                                             <input type="text" id="title" class="form-control form-control-sm">
+                                            <mat-error *ngIf="firstFormGroup.controls['firstCtrl'].hasError('maxWordCountValidator')">
+                                                This field is required.
+                                              </mat-error>
             
             
                                         </div>
@@ -51,12 +61,12 @@
             
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="amount">ENTER AMOUNT</label>
-                                            <input type="number" id="amount" class="form-control form-control-sm">
+                                            <input type="number" id="amount" class="form-control form-control-sm" >
             
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="amount">END DATE </label>
-                                            <input type="date" id="amount" class="form-control form-control-sm">
+                                            <input type="date" id="amount" class="form-control form-control-sm" >
             
                                         </div>
                             
@@ -72,9 +82,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <button mat-button matStepperNext  class="btn btn-primary button">Next</button>
+                <div class="d-flex justify-content-center">
+                    <button mat-button matStepperNext class="button">Next</button>
                   </div>
+
+                  <mat-error *ngIf="firstFormGroup.controls['firstCtrl'].hasError('required')">
+                    This field is required.
+                  </mat-error>
             </section>
             
             
@@ -104,21 +118,103 @@
                         </div>
                     </div>  
                 </div>
+                <!-- <div class="d-flex justify-content-center" >
+                    <button mat-button matStepperPrevious class=" button-back btn-back">Back</button>
+                    <button mat-button matStepperNext style="color: #3487d3;" class="text-center  btn-skip">SKIP </button>
+                  </div> -->
+
+                  <div class="d-flex justify-content-between align-items-center">
+                    <button mat-button matStepperNext class="button">Next</button>
+                    <!-- <div class="d-flex justify-content-center">
+                      <!-- Empty div to center the back button
+                      <button mat-button matStepperNext class="button-back btn-back">Next</button>
+                    </div> -->
+                    <button mat-button matStepperNext style="color: #3487d3;">SKIP</button>
+                  </div>
+
+                  <mat-error *ngIf="secondFormGroup.controls['secondCtrl'].hasError('required')">
+                    This field is required.
+                  </mat-error>
+                  
             </section>
         </form>
 
     </mat-step>
 
     <!-- step3 -->
-    <mat-step>
+    <mat-step [stepControl]="thirdFormGroup" > 
+        <form [formGroup]="thirdFormGroup" >
+
+        
         <!-- stepper3 -->
-        <ng-template matStepLabel >Done</ng-template>
-        <p>You are now done.</p>
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
+        <ng-template matStepLabel >Contact details</ng-template>
+
+        <section>
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div>
+                            <div class="card-body p-5">
+        
+                                <form action="" autocomplete="on">
+        
+                                
+        
+        
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input type="email" id="email" class="form-control form-control-sm">
+                                       
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="amount">Phone</label>
+                                        <input type="number" id="amount" class="form-control form-control-sm">
+        
+                                    </div>
+        
+        
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="text">Facebook Account</label>
+                                        <input type="text" id="text" class="form-control form-control-sm">
+        
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="text">Twitter Account</label>
+                                        <input type="text" id="text" class="form-control form-control-sm">
+        
+                                    </div>
+        
+                                    
+        
+        
+                                </form>
+        
+                                
+        
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <mat-error *ngIf="thirdFormGroup.controls['thirdCtrl'].hasError('required')">
+                This field is required.
+              </mat-error>
+            
+        </section>
+      
+          <div class="d-flex justify-content-between align-items-center">
+            <button mat-button  style="color: #3487d3;"(click)="stepper.reset()">RESET</button>
+
+            <button mat-button matStepperNext style="color: #3487d3;">FINISH</button>
+          </div>
+
+        
+        
+    </form>
     </mat-step>
+    
+
 </mat-stepper>
 
 

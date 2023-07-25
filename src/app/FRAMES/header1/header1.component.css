@@ -14,14 +14,17 @@
 }
 
 .navlinks a:hover {
-    color: #2443B2;
+    color: #3487d3;
 
 }
-
-.navlinks a:active {
+.active-link{
+    color:#3487d3
+}
+/* a:active {
     text-decoration: underline;
+    color: #3487d3;
 
-}
+} */
 
 /* .align-left{
     margin-right:15rem;

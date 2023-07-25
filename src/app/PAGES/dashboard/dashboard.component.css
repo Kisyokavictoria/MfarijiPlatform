@@ -6,14 +6,15 @@
 }
 
 .heading {
-    color: #E01515;
+    color: #3487d3;
     font-size: 1.5rem;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
-    margin-left: 2.5rem;
+    margin-left: 5rem;
     margin-top: 5rem;
     padding-top: 3rem;
+    
 }
 
 .heading-text {
@@ -53,8 +54,7 @@
     border-radius: 1.25rem;
     background: #3487D3;
     border: none;
-    color: black;
-    color: #000;
+   color: white;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: normal;
@@ -70,4 +70,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.image-style{
+    margin-top: auto;
+}
+.section3{
+    margin-left: 1rem;
 }
