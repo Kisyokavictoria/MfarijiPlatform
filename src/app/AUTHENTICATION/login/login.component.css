@@ -1,10 +1,53 @@
-.login-page{
+/* .login-page{
     height:20rem;
+} */
+/*  */
+.login {
+
+    border-radius: 2rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-h5 a{
+
+
+
+
+
+.login-page {
+    font-family: inter;
+    font-size: 1.3rem;
+
+}
+.card-body{
+    margin-top: 5rem;
+}
+.text {
+    margin-top: 7rem;
+    color: white;
+
+
+}
+.form-outline{
+    margin-top:3rem ;
+}
+.newtomfariji a{
+    margin-left: 0.5rem;
     text-decoration: none;
-    color: #29B547;
+    color: #3487d3
+    
+
 }
+.login-button{
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    background: #3487d3;
+    border: none;
+}
+input{
+    background: #D0E3F5;
+}
+
+
+
 input.ng-invalid.ng-touched {
     border: 1px solid red;
 }

@@ -6,15 +6,27 @@ section {
     font-weight: 400;
     line-height: normal;
 }
-
+input{
+    background: #D0E3F5;
+}
 .signup {
-    font-family: inter;
-    font-size: 1.3rem;
+
+    border-radius: 2rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.login-text {
+
+
+
+.signup-page {
+    font-family: inter;
+    font-size: 1.3rem;
+
+}
+
+/* .login-text {
     color: #000;
-    font-family: Inter;
+    font-family: Inter; 
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
@@ -24,10 +36,34 @@ section {
     color: #29B547;
     text-decoration: none;
 
-}
-#image-upload{
+} */
+
+#image-upload {
     height: fit-content;
 }
+.signup-button{
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    background: #3487d3;
+    border: none;
+}
+
+.text {
+    margin-top: 5rem;
+    color: white;
+
+
+}
+.login-text a{
+    text-decoration: none;
+    color: #3487d3;
+    margin-left: 0.5rem;
+}
+
+/*  */
+
+
+
 
 input.ng-invalid.ng-touched {
     border: 1px solid red;

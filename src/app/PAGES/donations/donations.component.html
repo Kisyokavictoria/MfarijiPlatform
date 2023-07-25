@@ -1,46 +1,49 @@
-<div class="container-fluid-xl donationpage">
-    <p class="intro-text">Thousands are crowdfunding for various causes support a fundraiser<br>
-        TODAY </p>
-    <div class="button-container">
-        <button class="btn btn-primary">start a fundraiser</button>
-    </div>
+<div style=" background: #D9D9D9 ;">
+    <app-header1> </app-header1>
+
+    <div class="container-fluid-xl donationpage">
+        <p class="intro-text">Thousands are crowdfunding for various causes support a fundraiser<br>
+            TODAY </p>
+        <div class="button-container">
+            <button class="btn btn-primary">start a fundraiser</button>
+        </div>
 
 
 
-   <!-- Card section -->
+        <!-- Card section -->
 
-    <div class="row row-cols-1 row-cols-md-3 g-5 donation mt-3" >
-        <div class="col" *ngFor="let cards of donations">
-            <div class="card h-100" style=" border-radius: 1.25rem 1.25rem 0 0;
-            border: none;"  >
-                <img [src]="cards.Image" class="card-img-top"
-                    alt="Skyscrapers" />
-                <div class="card-body">
-                    <p class="card-text">
-                        {{cards.content}}
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <h4 class="raised-text">DONATED/RAISED</h4>
-                    <div class="d-flex">
-                        <div class="progress" style="width: 50%;" role="progressbar"
-                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%">
-                            </div>
-                        </div>
-                        <button class="btn btn-primary donate-button">DONATE</button>
+        <div class="row row-cols-1 row-cols-md-3 g-5 donation mt-3">
+            <div class="col" *ngFor="let cards of donations.slice(0, cardsToShow)">
+                <div class="card h-100" style=" border-radius: 1.25rem 1.25rem 0 0;
+            border: none;">
+                    <img [src]="cards.Image" class="card-img-top" alt="Skyscrapers" />
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{cards.content}}
+                        </p>
                     </div>
+                    <div class="card-footer">
+                        <h4 class="raised-text">RAISED/TOTAL</h4>
+                        <div class="d-flex">
+                            <div class="progress" style="width: 50%;" role="progressbar"
+                                aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary donate-button">DONATE</button>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        
-    </div>
 
-    <div class=" loadmore mt-5">
-        <h5>MAKE YOUR DONATIONS TODAY ! </h5>
-        <button class="btn btn-primary button2">SEE MORE DONATIONS</button>
+
+        </div>
+
+        <div class=" loadmore mt-5">
+            <h5>MAKE YOUR DONATIONS TODAY ! </h5>
+            <button class="btn btn-primary button2" (click)="loadMoreCards()">SEE MORE DONATIONS</button>
+        </div>
     </div>
 </div>

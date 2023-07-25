@@ -1,6 +1,144 @@
-<section>
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+<app-header1></app-header1>
+
+<!-- signup.component.html -->
+<div class="container-xl mt-5 signup-page mb-5 h-100">
+    <div class="row signup">
+        <!-- Form Section -->
+        <div class="col-lg-6 card-body p-5 text-center">
+            <h3 class="mb-5">Sign Up </h3>
+            <form [formGroup]="signupForm" (ngSubmit)="formSubmit()">
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="Fname">First name</label>
+                    <input type="text" id="Fname" class="form-control form-control-sm" formControlName="firstName">
+                    <div>
+                        <small
+                            *ngIf="signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched ">First
+                            name required</small>
+                    </div>
+
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="Lname">Last name</label>
+                    <input type="text" id="Lname" class="form-control form-control-sm" formControlName="lastName">
+                    <div>
+                        <small *ngIf="signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched ">
+                            Last name required
+                        </small>
+
+                    </div>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="email" class="form-control form-control-sm" formControlName="email">
+                    <div>
+                        <small
+                            *ngIf="signupForm.get('email')?.errors?.['required'] && signupForm.get('email')?.touched">
+                            email required
+                        </small>
+                        <small *ngIf="signupForm.get('email')?.errors?.['email'] && signupForm.get('email')?.touched">
+                            email entered is invalid
+                        </small>
+                    </div>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="Pword">Password</label>
+                    <input type="password" id="Pword" class="form-control form-control-sm" formControlName="password">
+                    <div>
+                        <!-- the ?. (safe navigator) performs a null check on the formcontrols and prevents run time error by short circuting the null and returning null(safe acces to the null object) in this case displaying the message -->
+                        <small
+                            *ngIf="signupForm.get('password')?.errors?.['required'] && signupForm.get('password')?.touched">
+                            password required
+                        </small>
+                        <small
+                            *ngIf="signupForm.get('password')?.errors?.['minlength'] && signupForm.get('password')?.touched">
+                            password should have a minimum length of 8
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="CPword">Confirm password</label>
+                    <input type="password" id="CPword" class="form-control form-control-sm"
+                        formControlName="confirmPassword">
+                    <div>
+                        <small
+                            *ngIf="signupForm.get('confirmPassword')?.errors?.['required'] && signupForm.get('confirmPassword')?.touched">
+                            confirm password required
+                        </small>
+
+                        <small
+                            *ngIf="signupForm.get('confirmPassword')?.errors?.['minlength'] && signupForm.get('confirmPassword')?.touched">
+                            confirm password required
+
+                        </small>
+
+                        <small
+                            *ngIf="signupForm.get('confirmPassword')?.errors?.['mismatch'] && signupForm.get('confirmPassword')?.touched">
+                            Passwords do not match
+                        </small>
+                          
+
+                       
+                    </div>
+
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="image-upload">BIRTH/DEATH CERTIFICATE</label>
+                    <input type="file" (change)="onImageChange($event)" id="image-upload"
+                        class="form-control form-control-sm " formControlName="image">
+                    <div>
+                        <small *ngIf="signupForm.get('image')?.invalid && signupForm.get('image')?.touched ">Image
+                            required</small>
+                    </div>
+
+                </div>
+
+                <h5 class="mt-5  login-text">Already signed up with Mfariji? <a routerLink="/login">Login</a>
+                </h5>
+
+
+
+                <button class="btn btn-primary  signup-button mt-3 " type="submit">Signup</button>
+
+
+            </form>
+
+        </div>
+
+        <!-- Image Section -->
+
+        <div class="col-lg-6 mt-3 mt-lg-0 d-none d-lg-block img-fluid"
+            style="background-image: url('/assets/images/signin3.png'); border-radius: 0rem 2rem 2rem 0rem;  ">
+
+            <div class="text  text-center">
+                <h1 class=" position-relative d-flex align-items-end justify-content-center p-5">GIVE JOYFULLY, CHANGE
+                    LIVES </h1>
+                <p class="mt-2">By donating today, you become a partner in creating a brighter future. Every
+                    contribution, no matter the size, matters greatly.</p>
+
+                <img src="/assets/images/addFriend.png" class="mt-5">
+
+                <!-- <button class="outline-button" (click)="navigateToLogin()">Login</button> -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div style="background:#D9D9D9;">
                     <div class="card-body p-5 text-center">
@@ -57,7 +195,7 @@
                                     formControlName="password">
                                 <div>
                                     <!-- the ?. (safe navigator) performs a null check on the formcontrols and prevents run time error by short circuting the null and returning null(safe acces to the null object) in this case displaying the message -->
-                                    <small
+<!-- <small
                                         *ngIf="signupForm.get('password')?.errors?.['required'] && signupForm.get('password')?.touched">
                                         password required
                                     </small>
@@ -111,6 +249,4 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </div> -->

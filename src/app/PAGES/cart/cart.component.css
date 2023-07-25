@@ -148,7 +148,7 @@
     width: 70%;
     margin: 4.5rem auto;
     height: 3.5rem;
-    background: #CA7F0D;
+    background: #C1E2C9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,4 +171,5 @@
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
+    color: white;
 }

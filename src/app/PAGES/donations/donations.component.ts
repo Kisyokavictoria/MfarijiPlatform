@@ -12,6 +12,20 @@ export class DonationsComponent implements OnInit {
 
   }
   constructor(private cartService: CartService) { }
+  cards:any[]=[];
+  cardsToShow: number = 9;
+  cardsToLoad: number =9;
+
+  loadMoreCards(){
+    if(this.cardsToLoad >= this.cardsToShow){
+      this.cardsToShow += this.cardsToLoad;
+
+    }
+    else{
+      alert('No more data to show');
+    }
+   
+  }
 
 
   donations = [

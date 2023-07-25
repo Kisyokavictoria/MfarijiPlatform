@@ -16,7 +16,9 @@ Signup(formData:FormData):Observable <any> {
   const headers = new HttpHeaders();
   headers.append('Content-Type', 'multipart/form-data');
   //the post request takes 2 arguements the endpointURL and the body(the data being sent to the endpoint)
-  return this.http.post('http://localhost:3000/signup', formData, {headers})
+  // return this.http.post('10.20.33.120:9090/api/v1/personregister', formData, {headers});
+  return this.http.post('http://10.20.33.120:9090/api/v1/personregister', formData, {headers})
+
 }
 
  

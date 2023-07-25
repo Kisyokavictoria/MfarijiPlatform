@@ -35,8 +35,7 @@
     border-radius: 1.25rem;
     background: #3487D3;
     border: none;
-    color: black;
-    color: #000;
+    color: white;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: normal;
@@ -69,6 +68,9 @@
     top: 0.5rem;
     margin-left: 1.2rem;
 }
+.homesection{
+    margin-top: 5rem;
+}
 
 .icon-texts {
     text-align: center;
@@ -94,6 +96,7 @@
     font-size: 1.7rem;
     line-height: normal;
 }
+
 
 .boxes {
     background: #D9D9D9;
@@ -133,7 +136,7 @@
     background: #3487D3;
     padding: 0.6875rem 1rem;
     border: none;
-    color: #000;
+    color: white;
     font-size: 0.875rem;
 
 }
@@ -141,13 +144,14 @@
 .progress-bar {
     background-color: #29B547;
 }
+
 .viewmore a {
     color: #29B547;
     text-decoration: none;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    
+
 }
 
 .Ftext {
