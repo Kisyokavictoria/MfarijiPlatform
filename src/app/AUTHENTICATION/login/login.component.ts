@@ -35,7 +35,8 @@ export class LoginComponent  implements OnInit{
       this.loginservice.login(credentials).subscribe(
         (response) => {
           // Handle successful login response here, e.g., store user data, navigate to a new page, etc.
-          alert('Login successful');
+          console.log(response);
+          // alert('Login successful');
           this.router.navigate(['dashboard']);
 
           // Example navigation to a different page after successful login

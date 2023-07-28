@@ -19,60 +19,92 @@
                             <div>
                                 <div class="card-body p-5">
             
-                                    <form action="" autocomplete="on">
             
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="title">TITLE</label>
-                                            <input type="text" id="title" class="form-control form-control-sm">
-                                            <mat-error *ngIf="firstFormGroup.controls['firstCtrl'].hasError('maxWordCountValidator')">
-                                                This field is required.
-                                              </mat-error>
+                                            <input type="text" id="title" class="form-control form-control-sm" formControlName="title">
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('title')?.errors?.['required'] && firstFormGroup.get('title')?.touched">
+                                                    Title required
+                                                </small>
+                                                <!-- <small *ngIf="firstFormGroup.get('title')?.errors?.['maxlength'] && firstFormGroup.get('title')?.touched">
+                                                    Tittle should have a maximmum of 7 words
+                                                </small> -->
+                                            </div>
             
             
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="brief">BRIEF</label>
                                             <!-- <input type="text" id="brief" class="form-control form-control-sm"> -->
-                                            <textarea id="message" name="message" rows="7" cols="50"class="form-control form-control-sm" style="border: 1px solid #000;"></textarea>
+                                            <textarea id="message" name="message" rows="7" cols="50" class="form-control form-control-sm" style="border: 1px solid #000;" formControlName="brief"></textarea>
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('brief')?.errors?.['required'] && firstFormGroup.get('brief')?.touched">
+                                                    Brief description required
+                                                </small>
+                                                <!-- <small *ngIf="firstFormGroup.get('brief')?.errors?.['maxlength'] && firstFormGroup.get('brief')?.touched">
+                                                   Brief description should be a maximum of 20 words
+                                                </small> -->
+                                            </div>
                                         </div>
             
             
-                                        <div class="form-outline mb-4">
+                                        <!-- <div class="form-outline mb-4">
                                             <label class="form-label" for="idno">ID NUMBER</label>
-                                            <input type="number" id="idno" class="form-control form-control-sm">
-                                        </div>
+                                            <input type="number" id="idno" class="form-control form-control-sm"formControlName="idNumber">
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('idNumber')?.errors?.['required'] && firstFormGroup.get('idNumber')?.touched">
+                                                    Id number required
+                                                </small>
+                                            </div>
+                                        </div> -->
             
             
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="county">COUNTY</label>
-                                            <input type="text" id="county" class="form-control form-control-sm">
+                                            <input type="text" id="county" class="form-control form-control-sm"formControlName="county">
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('county')?.errors?.['required'] && firstFormGroup.get('county')?.touched">
+                                                    County required
+                                                </small>
+                                            </div>
             
                                         </div>
             
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="subcounty">SUB COUNTY</label>
-                                            <input type="text" id="subcounty" class="form-control form-control-sm">
+                                            <input type="text" id="subcounty" class="form-control form-control-sm" formControlName="subCounty">
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('subCounty')?.errors?.['required'] && firstFormGroup.get('subCounty')?.touched">
+                                                    Subcounty required
+                                                </small>
+                                            </div>
             
                                         </div>
-            
-                                        <div class="text-center" style="font-weight: 600;">
-                                            <h2>OPTIONAL SETTINGS</h2>
-                                        </div>
-            
+             
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="amount">ENTER AMOUNT</label>
-                                            <input type="number" id="amount" class="form-control form-control-sm" >
+                                            <input type="number" id="amount" class="form-control form-control-sm" formControlName="amount" >
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('amount')?.errors?.['required'] && firstFormGroup.get('amount')?.touched">
+                                                    Amount required
+                                                </small>
+                                            </div>
             
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="amount">END DATE </label>
-                                            <input type="date" id="amount" class="form-control form-control-sm" >
+                                            <input type="date" id="amount" class="form-control form-control-sm" formControlName="endDate">
+                                            <div>
+                                                <small *ngIf="firstFormGroup.get('endDate')?.errors?.['required'] && firstFormGroup.get('endDate')?.touched">
+                                                    End date required
+                                                </small>
+                                            </div>
             
                                         </div>
                             
             
             
-                                    </form>
             
                                     
             
@@ -83,12 +115,10 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button mat-button matStepperNext class="button">Next</button>
+                    <button mat-button matStepperNext class="button" [disabled]="firstFormGroup.invalid" >Next</button>
                   </div>
 
-                  <mat-error *ngIf="firstFormGroup.controls['firstCtrl'].hasError('required')">
-                    This field is required.
-                  </mat-error>
+                  
             </section>
             
             
@@ -98,7 +128,7 @@
 
 
     <!-- step2 -->
-    <mat-step [stepControl]="secondFormGroup" optional>
+    <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
             <!-- stepper2 -->
             <ng-template matStepLabel  >Upload images</ng-template>
@@ -107,13 +137,15 @@
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                             <div class="card-body p-5">
-                                <form action="" autocomplete="on">
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="image-upload">BIRTH/DEATH CERTIFICATE</label>
-                                        <input type="file" id="image-upload" class="form-control form-control-sm ">
+                                        <input type="file" id="image-upload" class="form-control form-control-sm "  (change)="onImageChange($event)" formControlName="image">
+                                        <div>
+                                            <small *ngIf="secondFormGroup.get('image')?.invalid && secondFormGroup.get('image')?.touched ">Image
+                                                required</small>
+                                        </div>
                                     </div>
             
-                                </form>
                             </div>
                         </div>
                     </div>  
@@ -124,17 +156,13 @@
                   </div> -->
 
                   <div class="d-flex justify-content-between align-items-center">
-                    <button mat-button matStepperNext class="button">Next</button>
+                    <button mat-button matStepperNext class="button" [disabled]="firstFormGroup.invalid">Next</button>
                     <!-- <div class="d-flex justify-content-center">
                       <!-- Empty div to center the back button
                       <button mat-button matStepperNext class="button-back btn-back">Next</button>
                     </div> -->
                     <button mat-button matStepperNext style="color: #3487d3;">SKIP</button>
                   </div>
-
-                  <mat-error *ngIf="secondFormGroup.controls['secondCtrl'].hasError('required')">
-                    This field is required.
-                  </mat-error>
                   
             </section>
         </form>
@@ -143,7 +171,7 @@
 
     <!-- step3 -->
     <mat-step [stepControl]="thirdFormGroup" > 
-        <form [formGroup]="thirdFormGroup" >
+        <form [formGroup]="thirdFormGroup" (ngSubmit)="submitForm()" >
 
         
         <!-- stepper3 -->
@@ -156,38 +184,72 @@
                         <div>
                             <div class="card-body p-5">
         
-                                <form action="" autocomplete="on">
         
                                 
         
         
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="email">Email</label>
-                                        <input type="email" id="email" class="form-control form-control-sm">
+                                        <input type="email" id="email" class="form-control form-control-sm" formControlName="email">
+                                        <div>
+                                            <small
+                                                *ngIf="thirdFormGroup.get('email')?.errors?.['required'] && thirdFormGroup.get('email')?.touched">
+                                                email required
+                                            </small>
+                                            <small *ngIf="thirdFormGroup.get('email')?.errors?.['email'] && thirdFormGroup.get('email')?.touched">
+                                                email entered is invalid
+                                            </small>
+                                        </div>
                                        
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="amount">Phone</label>
-                                        <input type="number" id="amount" class="form-control form-control-sm">
+                                        <input type="number" id="amount" class="form-control form-control-sm" formControlName="phone">
+                                        <div>
+                                            <small
+                                                *ngIf="thirdFormGroup.get('phone')?.errors?.['required'] && thirdFormGroup.get('phone')?.touched">
+                                                Phone number required
+                                            </small>
+                                            <small *ngIf="thirdFormGroup.get('phone')?.errors?.['maxlength'] && thirdFormGroup.get('phone')?.touched">
+                                            The number entered is more than required
+                                            </small>
+                                            <small *ngIf="thirdFormGroup.get('phone')?.errors?.['minlength'] && thirdFormGroup.get('phone')?.touched">
+                                                The number  entered is less than requied
+                                            </small>
+                                        </div>
         
                                     </div>
         
         
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="text">Facebook Account</label>
-                                        <input type="text" id="text" class="form-control form-control-sm">
+                                        <input type="text" id="text" class="form-control form-control-sm" formControlName="facebook">
+                                        <div>
+                                            <small
+                                                *ngIf="thirdFormGroup.get('facebook')?.errors?.['required'] && thirdFormGroup.get('facebook')?.touched">
+                                                Phone number required
+                                            </small>
+                                           
+                                        </div>
+                                        
         
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="text">Twitter Account</label>
-                                        <input type="text" id="text" class="form-control form-control-sm">
+                                        <input type="text" id="text" class="form-control form-control-sm" formControlName="twitter">
+                                        <div>
+                                            <small
+                                                *ngIf="thirdFormGroup.get('twitter')?.errors?.['required'] && thirdFormGroup.get('twitter')?.touched">
+                                                Phone number required
+                                            </small>
+                                           
+                                        </div>
         
                                     </div>
         
                                     
         
         
-                                </form>
         
                                 
         
@@ -197,9 +259,6 @@
                     </div>
                 </div>
             </div>
-            <mat-error *ngIf="thirdFormGroup.controls['thirdCtrl'].hasError('required')">
-                This field is required.
-              </mat-error>
             
         </section>
       

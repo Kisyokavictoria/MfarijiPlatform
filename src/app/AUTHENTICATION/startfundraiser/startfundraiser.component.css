@@ -77,3 +77,11 @@ mat-stepper {
 ::ng-deep .mat-step-label:active{
     color: red !important;
 }
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+small {
+    color: red;
+}

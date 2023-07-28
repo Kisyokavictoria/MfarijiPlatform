@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './FRAMES/footer/footer.component';
-import { HeaderComponent } from './FRAMES/header/header.component';
+import { HeaderComponent } from './FRAMES/header-dash/header.component';
 import { LoginComponent } from './AUTHENTICATION/login/login.component';
 import { SignupComponent } from './AUTHENTICATION/signup/signup.component';
 import { HomepageComponent } from './PAGES/homepage/homepage.component';
@@ -20,7 +20,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { Header1Component } from './FRAMES/header1/header1.component'
+import { Header1Component } from './FRAMES/header1/header1.component';
+import { MatBadgeModule } from '@angular/material/badge';
+import { LogoutComponent } from './AUTHENTICATION/logout/logout.component';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { Header1Component } from './FRAMES/header1/header1.component'
     DashboardComponent,
     StartfundraiserComponent,
     Header1Component,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { Header1Component } from './FRAMES/header1/header1.component'
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

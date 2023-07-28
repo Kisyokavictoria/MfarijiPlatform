@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Signupinterface } from 'src/app/INTERFACES/signupinterface';
+//import { Signupinterface } from 'src/app/INTERFACES/signupinterface';
 import { SignupserviceService } from 'src/app/SERVICES/Auth-service/signupservice.service';
 import { ConfirmPasswordValidator } from './password.validator';
 import { catchError } from 'rxjs/operators';
@@ -33,46 +33,16 @@ export class SignupComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
       image: [null, Validators.required]
-    }, 
-     
-    { validator: ConfirmPasswordValidator.MatchPassword}
+    },
+
+      { validator: ConfirmPasswordValidator.MatchPassword }
     );
     // this.signupForm.get('confirmPassword')?.setValidators([Validators.required, this.passwordMatchValidator()]);
   }
 
 
- 
-
-  // passwordMatchValidator(formgroup: FormGroup){
-  //   const password = formgroup.get('password')?.value;
-  //   const conformPassword = formgroup.get('confirmPassword')?.value;
-
-  //   if(password !== conformPassword){
-  //     formgroup.get('confirmPassword')?.setErrors({mismatch: true});
-  //   }
-  //   else{
-  //     formgroup.get('confirmPassword')?.setErrors(null);
-  //   }
-
-  // }
-
-  // passwordMatchValidator(form: FormGroup): null | ValidationErrors {
-  //   let pass = form.controls["password"].value;
-  //   let confPass = form.controls["confirmPassword"].value;
-
-  //   if (!pass || !confPass) {
-  //     return null;
-  //   }
-
-  //   if (confPass.length > 0 && pass !== confPass) {
-  //     return { mismatch: true };
-  //   }
-
-  //   return null;
-  // }
 
 
- 
 
 
   formSubmit() {
@@ -80,6 +50,8 @@ export class SignupComponent implements OnInit {
       alert("The data in the form is invalid.Please fill out the required fields");
       return;
     }
+
+
     let data =
     {
       "firstName": this.signupForm.controls['firstName'].value,
@@ -121,9 +93,10 @@ export class SignupComponent implements OnInit {
         return throwError(error);
       })
     ).subscribe(resp => {
-      alert("signup Successful");
+      console.log(resp);
+      // alert("signup Successful");
       this.router.navigate(['login']);
-      
+
 
 
     },
@@ -144,7 +117,7 @@ export class SignupComponent implements OnInit {
       if (this.imageFile instanceof Blob || this.imageFile instanceof File) {
         const reader = new FileReader();
         reader.onload = (e: any) => {
-          this.existingImage = e.target?.result; // Assign the image source to 'existingImage'
+          this.existingImage = e.target?.result; // Assign the image source to 'existingImage'. previewing the image
         };
         reader.readAsDataURL(this.imageFile);
       }
@@ -154,18 +127,5 @@ export class SignupComponent implements OnInit {
     }
 
 
-
-
-
-
-    //this enables us to read the contents of the file
-
-
-
-
-    // }
-
-
-    //})
   }
 }

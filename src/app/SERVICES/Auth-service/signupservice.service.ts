@@ -21,16 +21,7 @@ Signup(formData:FormData):Observable <any> {
 
 }
 
- 
-  
-  // Signup(): Observable<any> {
-  // // Signup(signupform: Signupinterface): Observable<any> {
-  //   // return this.http.post('192.168.137.228:9090/api/v1/widowRegister',
-  //   //   { id: 1 })
-  //   return this.http.get('https://fakestoreapi.com/products',)
-    
 
- // }
 
 
 

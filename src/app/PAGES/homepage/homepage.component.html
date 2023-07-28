@@ -82,7 +82,7 @@
         <h2 class="mt-5">FEATURED FUNDRAISERS </h2>
         <p>now trending</p>
         <div class="row row-cols-1 row-cols-md-3 g-5 donation mt-3">
-            <div class="col" *ngFor="let cards of card">
+            <div class="col" *ngFor="let cards of donations">
                 <div class="card h-100" style=" border-radius: 1.25rem 1.25rem 0 0;
                 border: none;">
                     <img [src]="cards.Image" class="card-img-top" alt="Skyscrapers" />
@@ -100,7 +100,7 @@
                                 <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%">
                                 </div>
                             </div>
-                            <button class="btn btn-primary donate-button">DONATE</button>
+                            <button class="btn btn-primary donate-button" (click)="addToCart(cards)">DONATE</button>
                         </div>
 
                     </div>

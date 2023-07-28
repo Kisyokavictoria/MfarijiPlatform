@@ -10,13 +10,42 @@ import { CartService } from 'src/app/SERVICES/cart/cart.service';
 })
 export class DonationsComponent implements OnInit {
   ngOnInit(): void {
+    
+  this.donations = [
+    { Image: '/assets/images/w1.png', content: 'Give aid to simon so that he can get a heart transplant medication and get his life back', id: 1 },
+    { Image: '/assets/images/w2.png', content: 'help camel manage her farm in makueniand take the kinds to school after their fathers death', id: 2 },
+    { Image: '/assets/images/w3.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 3 },
+    { Image: '/assets/images/w4.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 4 },
+    { Image: '/assets/images/w5.png', content: 'help camel manage his farm in makueni and take the kinds to school after their fathers death', id: 5 },
+    { Image: '/assets/images/w6.png', content: 'Help kali boost his salon business after a fire outbraek that damaged her businesworth 300,000  to get back to  his nomal life', id: 6 },
+    { Image: '/assets/images/w7.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 7 },
+    { Image: '/assets/images/w8.png', content: 'support  James finish his home construction project after his wife died in a fire accident ', id: 8 },
+    { Image: '/assets/images/w9.png', content: 'Help mercy finish her  child school fees so that she can graduate start her career as a teacher after her fathers death who was the bread winner', id: 9 },
+    { Image: '/assets/images/w10.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 10 },
+    { Image: '/assets/images/w11.png', content: 'Help john get back to his life after a road accident which broke his car which was the only source of income as a driver', id: 11 },
+    { Image: '/assets/images/w12.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 12 },
+    { Image: '/assets/images/w13.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 13 },
+    { Image: '/assets/images/w14.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 14 },
+    { Image: '/assets/images/w2.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 15 },
+    { Image: '/assets/images/w8.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 16 },
+    { Image: '/assets/images/w5.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 17 },
+    { Image: '/assets/images/w3.png', content: 'help camel manage her farm in makueni and take the kinds to school after their fathers death', id: 18 }
+
+
+  ]
+
 
   }
   constructor(private cartService: CartService, private router: Router) { }
   navigatefundraiser(){
-    this.router.navigate(['/startfundraiser'])
+    this.router.navigate(['login'])
 }
 
+ donations: Cartinterface [] = []
+
+ addToCart(item: any) {
+  this.cartService.addItemToCart(item);
+}
 
 
 
@@ -36,27 +65,6 @@ export class DonationsComponent implements OnInit {
    
   }
 
-
-  donations = [
-    { Image: '/assets/images/w1.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 1 },
-    { Image: '/assets/images/w2.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 2 },
-    { Image: '/assets/images/w3.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 3 },
-    { Image: '/assets/images/w4.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 4 },
-    { Image: '/assets/images/w5.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 5 },
-    { Image: '/assets/images/w6.png', content: 'Help kali boost her salon business after a fire outbraek that damaged her businesworth 300,000  to get back to  her nomal life', id: 6 },
-    { Image: '/assets/images/w7.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 7 },
-    { Image: '/assets/images/w8.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 8 },
-    { Image: '/assets/images/w9.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 9 },
-    { Image: '/assets/images/w3.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 3 },
-    { Image: '/assets/images/w4.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 4 },
-    { Image: '/assets/images/w5.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 5 },
-    { Image: '/assets/images/w6.png', content: 'Help kali boost her salon business after a fire outbraek that damaged her businesworth 300,000  to get back to  her nomal life', id: 6 },
-    { Image: '/assets/images/w7.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 7 },
-    { Image: '/assets/images/w8.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 8 },
-    { Image: '/assets/images/w9.png', content: 'help camel manage her farm in makueniand te the kinds to school aftertheir faters death', id: 9 }
-
-
-  ]
 
   // addToCart(fundraisers: Cartinterface) {
   //   const isDuplicate = this.cartService.checkIfItemExists(fundraisers.id);

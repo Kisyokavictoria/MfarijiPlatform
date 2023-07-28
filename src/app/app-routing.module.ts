@@ -8,6 +8,7 @@ import { HomepageComponent } from './PAGES/homepage/homepage.component';
 import { CartComponent } from './PAGES/cart/cart.component';
 import { DashboardComponent } from './PAGES/dashboard/dashboard.component';
 import { StartfundraiserComponent } from './AUTHENTICATION/startfundraiser/startfundraiser.component';
+import { LogoutComponent } from './AUTHENTICATION/logout/logout.component';
 
 const routes: Routes = [
   {path:'', component: HomepageComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'cart', component:CartComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'startfundraiser', component: StartfundraiserComponent},
+  {path: 'logout', component: LogoutComponent}
   
 ];
 
